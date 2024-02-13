@@ -3,7 +3,7 @@ import pandas as pd
 import base64
 
 
-file_ = open("C:\steil\pzurim\gifwidefade2.5.gif", "rb")
+file_ = open("gifwidefade2.5.gif", "rb")
 contents = file_.read()
 data_url = base64.b64encode(contents).decode("utf-8")
 file_.close()
@@ -30,7 +30,7 @@ st.text("Link to the current results / קישור לתוצאות הנוכחיו�
 st.markdown("https://www.bridge.co.il/viewer/total.php?event=22645")
 
 seatings1_list = []
-with open ('C:\steil\CSV\Book2.csv','r') as seatings1:
+with open ('Book2.csv','r') as seatings1:
     seatings1 = seatings1.readlines()
     for seat in seatings1:
         fields = seat.strip().split(',')
